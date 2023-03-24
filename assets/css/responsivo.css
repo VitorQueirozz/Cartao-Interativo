@@ -1,0 +1,119 @@
+@media screen and (max-width:1017px){
+    
+    .fundo img{
+        height: 40vh;
+        width: 100%;
+        position: relative;
+    }
+    
+    
+    .conteudo {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .formulario {
+        width: 280px;
+        margin-bottom: 30px;
+    }
+
+    .input-date {
+        width: 50%;
+    }
+
+    .input-cvc {
+        width: 50%;
+    }
+
+    .dados-front {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        height: calc(100% - 40px);
+    }
+
+    .dados-front img {
+        width: 60px;
+    }
+    
+    .dados-number-nome {
+        gap: 10px;
+    }
+
+    .dados-number-nome p {
+        font-size: 22px;
+    }
+
+    .dados-name p {
+        font-size: 17px;
+    }
+
+    .number-cvc {
+        top: 42%;
+    }
+
+    .img-front,
+    .img-back {
+        width: 350px;
+    }
+
+}
+
+@media screen and (max-width:500px) {
+    .conteudo {
+        top: 90%;
+    }
+
+    .dados-number-nome p {
+        font-size: 17px;
+        letter-spacing: 3px;
+    }
+
+    .dados-name p {
+        font-size: 14px;
+    }
+
+    .number-cvc {
+        top: -261px;
+        right: -105px;
+    }
+
+    .img-front,
+    .img-back {
+        width: 280px;
+    }
+
+    .img-front {
+        position: absolute;
+        bottom: -100px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .dados-front {
+        position: absolute;
+        top: -110px;
+        left: -125px;
+        height: calc(100% - 60px);
+        gap: 25px;
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .img-back {
+        position: absolute;
+        top: -250px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .modal {
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 300px;  
+        text-align: center;
+    }
+}

@@ -1,0 +1,224 @@
+:root {
+    --primaryLinear: hsl(249, 99%, 64%) to hsl(278, 94%, 30%); /*ativar input border*/
+    --primaryLinear2: hsl(278, 94%, 30%);
+    --primaryRed: hsl(0, 100%, 66%); /*input error*/
+
+    --neutraWhite: hsl(0, 0%, 100%);
+    --neutraLight: hsl(270, 3%, 87%);
+    --neutraDark: hsl(279, 6%, 55%);
+    --neutraVerDark: hsl(278, 68%, 11%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk';
+    font-weight: 500;
+}
+
+body {
+    background-color: var(--neutraWhite);
+    height: 100vh;
+    width: 100%;
+}
+
+.fundo img{
+    height: 100vh;
+    width: 35%;
+    position: relative;
+}
+
+.conteudo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    gap: 150px;
+}
+
+.img-card {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    position: relative;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 400px;
+    opacity: 1;
+    z-index: 1;
+}
+
+.formulario.ativo {
+    opacity: 0;
+    z-index: -1;
+}
+
+span {
+    color: var(--primaryRed);
+    display: none;
+    font-size: 14px;
+}
+
+label {
+    color: var(--primaryLinear);
+}
+
+input::placeholder {
+    color: var(--neutraLight);
+}
+
+.input-name {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-number {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-name input,
+.input-number input {
+    border: 1px solid var(--neutraLight);
+    height: 40px;
+    border-radius: 5px;
+    padding-left: 10px;
+    font-size: 18px;
+    color: var(--primaryLinear2);
+    outline: none;
+}
+
+.input-date-cvc {
+    display: flex;
+    gap: 20px;
+}
+
+.input-date {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 40%;
+}
+
+.input-AnoMesSpan {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-AnoMesSpan input {
+    border: 1px solid var(--neutraLight);
+    height: 40px;
+    width: 100%;
+    border-radius: 5px;
+    padding-left: 10px;
+    font-size: 18px;
+    text-align: center;
+    color: var(--primaryLinear2);
+    outline: none;
+}
+
+.input-AnoMes {
+    display: flex;
+    gap: 10px;
+}
+
+.input-cvc {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 60%;
+}
+
+.input-cvc input {
+    border: 1px solid var(--neutraLight);
+    height: 40px;
+    width: 100%;
+    border-radius: 5px;
+    padding-left: 10px;
+    font-size: 18px;
+    color: var(--primaryLinear2);
+    outline: none;
+}
+
+button {
+    border: none;
+    background-color: var(--primaryLinear2);
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    color: var(--neutraWhite);
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.img-card-front {
+    position: relative;
+}
+
+.dados-front {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 60px);
+}
+
+.dados-front img {
+    width: 80px;
+}
+
+
+.dados-number-nome {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.dados-number-nome p {
+    font-size: 28px;
+    color: var(--neutraWhite);
+    letter-spacing: 3px;
+}
+
+.dados-name{
+    display: flex;
+    justify-content: space-between;
+}
+
+.paragrafoMesAno {
+    display: flex;
+}
+
+.dados-name p {
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 100;
+}
+
+.img-card-back {
+    position: relative;
+}
+
+.number-cvc {
+    position: absolute;
+    top: 44%;
+    right: 12%;
+}
+
+.number-cvc p {
+    color: var(--neutraWhite);
+    letter-spacing: 2px;
+}

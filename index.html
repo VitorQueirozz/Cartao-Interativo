@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartão interativo</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/colorFont.css">
+    <link rel="stylesheet" href="assets/css/modal.css">
+    <link rel="stylesheet" href="assets/css/responsivo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="assets/img/favicon-32x32.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="fundo">
+        <img src="assets/img/bg-main-desktop.png" alt="">
+    </div>
+
+    <div class="modal">
+        <div class="modal-conteudo">
+            <img src="assets/img/icon-complete.svg" alt="">
+            <h1>Obrigado!</h1>
+            <p>Adicionamos os detalhes do seu cartão</p>
+            <button class="btn-modal">Continue</button>
+        </div>
+    </div>
+
+    <main class="conteudo">
+
+        <aside class="img-card">
+            <div class="img-card-front">
+                <img src="assets/img/bg-card-front.png" alt="" class="img-front">
+                <div class="dados-front">
+                    <img src="assets/img/card-logo.svg" alt="">
+                    <div class="dados-number-nome">
+                        <p class="resNumero">0000 0000 0000 0000</p>
+                        <div class="dados-name">
+                            <p class="resNome">Lionel Messi</p>
+                            <div class="paragrafoMesAno">
+                                <p class="resMes">00/<p class="resAno">00</p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="img-card-back">
+                <img src="assets/img/bg-card-back.png" alt="" class="img-back">
+                <div class="number-cvc">
+                    <p class="resCVC">000</p>
+                </div>
+            </div>
+        </aside>
+
+        <form class="formulario">
+            <div class="input-name">
+                <label for="nome">Nome do cartão</label>
+                <input type="text" maxlength="35" name="nome" id="nome" placeholder="e.x.Lionel Messi" class="inputs" oninput="verificarNome()">
+                <span class="required">Não pode ficar em branco</span>
+            </div>
+
+            <div class="input-number">
+                <label for="numero">Número do cartão</label>
+                <input type="text" maxlength="16" name="numero" id="numero" placeholder="e.x.1234 5678 9123 0000" class="inputs" oninput="verificarNumero()">
+                <span class="required">Quantidade de números inválida</span>
+            </div>
+
+            <div class="input-date-cvc">
+                <div class="input-date">
+                    <label for="data">Data (MM/YY)</label>
+                    <div class="input-AnoMesSpan">
+                        <div class="input-AnoMes">
+                            <div>
+                                <input type="text" maxlength="2" name="mes" id="mes" placeholder="MM" class="inputs" oninput="verificarMes()">
+                                <span class="required">Preencha o mês</span>
+                            </div>
+                            <div>
+                                <input type="text" maxlength="2" name="ano" id="ano" placeholder="YY" class="inputs" oninput="verificarAno()">
+                                <span class="required">Preencha o ano</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-cvc">
+                    <label for="cvc">CVC</label>
+                    <input type="text" maxlength="3" name="cvc" id="cvc" placeholder="e.x. 123" class="inputs" oninput="verificarCvc()">
+                    <span class="required">Quantidade de números inválida</span>
+                </div>
+            </div>
+
+            <div class="btn-confirm">
+                <button type="submit" class="botao">Confirmar</button>
+            </div>
+
+        </form>
+    </main>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
