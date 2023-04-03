@@ -58,13 +58,13 @@
         <form class="formulario">
             <div class="input-name">
                 <label for="nome">Nome do cartão</label>
-                <input type="text" maxlength="35" name="nome" id="nome" placeholder="e.x.Lionel Messi" class="inputs" oninput="verificarNome()">
+                <input type="text" maxlength="35" name="nome" id="nome" placeholder="e.x.Lionel Messi" class="inputs" oninput="verificarNome()" onchange="verificarEnvio()">
                 <span class="required">Não pode ficar em branco</span>
             </div>
 
             <div class="input-number">
                 <label for="numero">Número do cartão</label>
-                <input type="text" maxlength="16" name="numero" id="numero" placeholder="e.x.1234 5678 9123 0000" class="inputs" oninput="verificarNumero()">
+                <input type="text" maxlength="16" name="numero" id="numero" placeholder="e.x.1234 5678 9123 0000" class="inputs" oninput="verificarNumero()" onchange="verificarEnvio()">
                 <span class="required">Quantidade de números inválida</span>
             </div>
 
@@ -74,11 +74,11 @@
                     <div class="input-AnoMesSpan">
                         <div class="input-AnoMes">
                             <div>
-                                <input type="text" maxlength="2" name="mes" id="mes" placeholder="MM" class="inputs" oninput="verificarMes()">
+                                <input type="text" maxlength="2" name="mes" id="mes" placeholder="MM" class="inputs" oninput="verificarMes()" onchange="verificarEnvio()">
                                 <span class="required">Preencha o mês</span>
                             </div>
                             <div>
-                                <input type="text" maxlength="2" name="ano" id="ano" placeholder="YY" class="inputs" oninput="verificarAno()">
+                                <input type="text" maxlength="2" name="ano" id="ano" placeholder="YY" class="inputs" oninput="verificarAno()" onchange="verificarEnvio()">
                                 <span class="required">Preencha o ano</span>
                             </div>
                         </div>
@@ -87,7 +87,7 @@
 
                 <div class="input-cvc">
                     <label for="cvc">CVC</label>
-                    <input type="text" maxlength="3" name="cvc" id="cvc" placeholder="e.x. 123" class="inputs" oninput="verificarCvc()">
+                    <input type="text" maxlength="3" name="cvc" id="cvc" placeholder="e.x. 123" class="inputs" oninput="verificarCvc()" onchange="verificarEnvio()">
                     <span class="required">Quantidade de números inválida</span>
                 </div>
             </div>

@@ -8,6 +8,8 @@ let formulario = document.querySelector('.formulario')
 let inputs = document.querySelectorAll('.inputs')
 let span= document.querySelectorAll('.required')
 
+let botao = document.querySelector('.botao')
+
 let filled = true;
 
 const nome = document.querySelector('#nome')
@@ -117,6 +119,12 @@ function verificarCvc() {
 
 let valida = true
 
+function chamarModal() {
+    let modal = document.querySelector('.modal')
+    modal.classList.add('ativo')
+    formulario.classList.add('ativo')
+}
+
 function verificarForm(event){
     event.preventDefault()
     verificarNome()
@@ -124,12 +132,15 @@ function verificarForm(event){
     verificarMes()
     verificarAno()
     verificarCvc()
-    let modal = document.querySelector('.modal')
-    modal.classList.add('ativo')
-    formulario.classList.add('ativo')
+
+    //chamarModal()
 }
 
-formulario.addEventListener('submit', verificarForm)
+/*formulario.addEventListener('submit', verificarForm)*/
+botao.addEventListener('click', verificarForm)
+
+
+
 
 let btnModal = document.querySelector('.btn-modal')
 
@@ -146,6 +157,14 @@ function limparModal() {
     modal.classList.remove('ativo')
     formulario.classList.remove('ativo')
     limparInput()
+}
+
+function verificarEnvio() {
+    if((inputs[0].value.length > 2) && (inputs[1].value.length > 15) && (inputs[2].value.length > 1) && (inputs[3].value.length > 1) && (inputs[4].value.length > 2)) {
+        botao.disabled = true
+        chamarModal()
+    } 
+    botao.disabled = false
 }
 
 
